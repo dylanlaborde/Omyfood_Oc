@@ -3,10 +3,19 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #F6F6F6;
     margin: 0;
     padding: 0;
+    height:100vh;
 }
+
+.main-container{
+    display: flex;
+}
+
 header{
     height: 113px;
 }
@@ -41,3 +50,27 @@ header{
        font-weight: 500;
     }
 }
+
+//*Footer*//
+
+.footer{
+    background-color: #353535;
+    padding: 22px 25px 22px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .footer__logo > img{
+        filter: invert(100%);
+        width: 35%;
+    }
+    .footer__link{
+        display: flex;
+        flex-direction: column;
+        gap:7px;
+        a{  
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+

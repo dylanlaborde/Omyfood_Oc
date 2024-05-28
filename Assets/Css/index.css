@@ -3,9 +3,17 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #F6F6F6;
   margin: 0;
   padding: 0;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
 }
 
 header {
@@ -42,6 +50,27 @@ header {
 }
 .location__textfield {
   font-weight: 500;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 22px 25px 22px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer .footer__logo > img {
+  filter: invert(100%);
+  width: 35%;
+}
+.footer .footer__link {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer .footer__link a {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=index.css.map */
