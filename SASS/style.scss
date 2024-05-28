@@ -1,0 +1,43 @@
+*{
+    font-family:roboto;
+}
+
+body {
+    background-color: #F6F6F6;
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 113px;
+}
+.header__{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #FFFF;
+    height: 55%;
+    filter: drop-shadow(0px 2px 4px #00000015);
+    &logo{
+        display: flex;
+        justify-content: center;
+    }
+    &logo--img{
+        width: 40%;
+    }
+    &backicon{
+        display: none;
+    }
+}
+
+.location__{
+    box-shadow: 0px 4px 4px #00000025;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+    background-color: #EAEAEA;
+    height: 45%;
+    &textfield{
+       font-weight: 500;
+    }
+}
