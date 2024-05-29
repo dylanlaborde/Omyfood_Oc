@@ -9,11 +9,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  gap: 30px;
-}
-
-header {
-  height: 113px;
 }
 
 .header__ {
@@ -21,7 +16,7 @@ header {
   flex-direction: row;
   align-items: center;
   background-color: white;
-  height: 55%;
+  height: 63px;
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.0823529412));
 }
 .header__logo {
@@ -42,7 +37,7 @@ header {
   align-items: center;
   gap: 17px;
   background-color: #EAEAEA;
-  height: 45%;
+  height: 50px;
 }
 .location__textfield {
   font-weight: 500;
@@ -63,6 +58,7 @@ main {
   width: 85%;
   gap: 18px;
   align-items: center;
+  padding: 30px 0px 30px 0px;
 }
 .hero div h1, .hero div h2 {
   text-align: center;
@@ -85,6 +81,54 @@ main {
   font-size: 18px;
   height: 50px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1450980392);
+}
+
+.fonctionement {
+  background-color: #FFFFFF;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 25px;
+  padding-bottom: 25px;
+}
+.fonctionement__btn {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  height: 70px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1450980392));
+}
+.fonctionement__btn h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.fonctionement__title {
+  align-self: flex-start;
+  margin: 0;
+  padding: 25px 0px 0px 20px;
+}
+.fonctionement__number {
+  position: relative;
+  left: -15px;
+  text-align: center;
+  border-radius: 50%;
+  background: rgb(147, 86, 220);
+  height: 24px;
+  width: 24px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+.fonctionement__content {
+  gap: 27px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.fonctionement__icon--purple {
+  color: #9356DC;
 }
 
 .footer {
