@@ -124,6 +124,11 @@ main {
   font-size: 14px;
   font-weight: 500;
 }
+.fonctionement__number span {
+  left: 8px;
+  top: 3px;
+  position: absolute;
+}
 .fonctionement__content {
   gap: 27px;
   display: flex;

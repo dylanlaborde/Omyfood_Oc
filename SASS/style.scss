@@ -127,6 +127,11 @@ main{
         color: white;
         font-size: 14px;
         font-weight: 500;
+        span{
+            left: 8px;
+            top: 3px;
+            position: absolute;
+        }
     }
     &__content{
         gap: 27px;
