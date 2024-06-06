@@ -85,6 +85,10 @@ main {
   height: 50px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1450980392);
 }
+.hero div .hero__button:hover {
+  background: linear-gradient(-158deg, #bc95e9 0%, #ffc6ef 100%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2078431373);
+}
 
 .fonctionement {
   background-color: #FFFFFF;
@@ -106,6 +110,10 @@ main {
 .fonctionement__btn h2 {
   font-size: 16px;
   font-weight: 500;
+}
+.fonctionement__btn:hover {
+  background: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2078431373);
 }
 .fonctionement__title {
   align-self: flex-start;
