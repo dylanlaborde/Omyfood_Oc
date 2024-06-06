@@ -46,29 +46,29 @@ body {
    
 }
 
-.header__{
+.header{
     @include flex-center(row);
     background-color: $white;
     height: 63px;
     @include drop-shadow(0,2,4,25);
-        &logo{
+        &__logo{
             @include flex-center();
         }
-        &logo--img{
+        &__logo--img{
             width: 40%;
         }
-        &backicon{
+        &__backicon{
             display: none;
         }
 }
 
-.location__{
+.location{
     @include flex-center();
     @include box-shadow(0,4,4,25);
     gap: 17px;
     background-color:$light-grey;
     height: 50px;
-        &textfield{
+        &__textfield{
             @include text-style(16,500);
         }
 }
