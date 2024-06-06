@@ -5,6 +5,8 @@
 body {
   display: flex;
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
   background-color: #F6F6F6;
   margin: 0;
   padding: 0;
@@ -14,14 +16,17 @@ body {
 .header__ {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #FFFFFF;
   height: 63px;
-  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.0823529412));
+  filter: drop-shadow(0px 2px 4px #00000025);
 }
 .header__logo {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 .header__logo--img {
   width: 40%;
@@ -31,81 +36,91 @@ body {
 }
 
 .location__ {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1450980392);
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 4px 4px #00000025;
   gap: 17px;
   background-color: #EAEAEA;
   height: 50px;
 }
 .location__textfield {
+  font-size: 16px;
   font-weight: 500;
 }
 
 main {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  flex-grow: 1;
   gap: 30px;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.hero div {
+.hero__container {
   display: flex;
   flex-direction: column;
-  width: 85%;
-  gap: 18px;
+  justify-content: center;
   align-items: center;
+  gap: 18px;
   padding: 30px 0px 0px 0px;
+  width: 85%;
 }
-.hero div h1, .hero div h2 {
+.hero__container h1, .hero__container h2 {
   text-align: center;
   margin: 0;
 }
-.hero div .hero__title {
+.hero__title {
+  font-size: 24px;
   font-weight: 700;
 }
-.hero div .hero__subtitle {
+.hero__subtitle {
   font-size: 18px;
   font-weight: 300;
 }
-.hero div .hero__button {
-  border-radius: 25px;
-  color: white;
+.hero__button {
   background: linear-gradient(-158deg, #9356DC 0%, #FF79DA 100%);
   border: none;
-  width: 218px;
-  font-weight: 500;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px #00000025;
+  color: #F6F6F6;
   font-size: 18px;
+  font-weight: 500;
   height: 50px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1450980392);
+  width: 218px;
 }
-.hero div .hero__button:hover {
+.hero__button:hover {
   background: linear-gradient(-158deg, #bc95e9 0%, #ffc6ef 100%);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2078431373);
+  box-shadow: 0px 4px 15px #00000035;
 }
 
 .fonctionement {
   background-color: #FFFFFF;
-  flex-direction: column;
-  align-items: center;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 25px;
   padding-bottom: 30px;
 }
 .fonctionement__btn {
-  display: flex;
-  align-items: center;
-  width: 85%;
-  border-radius: 20px;
   background-color: #F6F6F6;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: center;
+  filter: drop-shadow(0px 4px 15px #00000025);
   height: 70px;
-  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1450980392));
+  width: 85%;
 }
 .fonctionement__btn h2 {
   font-size: 16px;
@@ -113,7 +128,7 @@ main {
 }
 .fonctionement__btn:hover {
   background: white;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2078431373);
+  box-shadow: 0px 4px 15px #00000035;
 }
 .fonctionement__title {
   align-self: flex-start;
@@ -121,16 +136,16 @@ main {
   padding: 25px 0px 0px 20px;
 }
 .fonctionement__number {
-  position: relative;
-  left: -15px;
-  text-align: center;
-  border-radius: 50%;
   background: rgb(147, 86, 220);
-  height: 24px;
-  width: 24px;
+  border-radius: 50%;
   color: white;
   font-size: 14px;
   font-weight: 500;
+  height: 24px;
+  left: -15px;
+  position: relative;
+  text-align: center;
+  width: 24px;
 }
 .fonctionement__number span {
   left: 8px;
@@ -138,10 +153,11 @@ main {
   position: absolute;
 }
 .fonctionement__content {
-  gap: 27px;
   display: flex;
   flex-direction: row;
+  justify-content: normal;
   align-items: center;
+  gap: 27px;
 }
 .fonctionement__icon--purple {
   color: #9356DC;
@@ -156,12 +172,14 @@ main {
   font-weight: 700;
 }
 .restaurant__card {
-  display: flex;
-  flex-direction: column;
-  height: 251px;
-  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.062745098));
   background: #FFFFFF;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  height: 251px;
+  filter: drop-shadow(0px 4px 15px #00000010);
 }
 .restaurant__card img {
   border-radius: 15px 15px 0px 0px;
@@ -175,6 +193,7 @@ main {
   width: 80px;
   height: 29px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -183,12 +202,14 @@ main {
 }
 .restaurant__badge span {
   font-size: 14px;
-  font-weight: 500px;
+  font-weight: 500;
   color: #008766;
 }
 .restaurant__content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 12px;
 }
 .restaurant__subtitle {
@@ -208,6 +229,8 @@ main {
   gap: 18px;
   display: flex;
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
   padding: 0px 17px 17px 17px;
 }
 .restaurant__menu a {
@@ -220,20 +243,31 @@ main {
   padding: 22px 25px 22px 25px;
   display: flex;
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
   gap: 16px;
 }
-.footer .footer__logo > img {
+.footer__logo > img {
   filter: invert(100%);
   width: 35%;
 }
-.footer .footer__link {
+.footer__link-container {
   display: flex;
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
   gap: 7px;
 }
-.footer .footer__link a {
+.footer__link {
   text-decoration: none;
-  color: white;
+  color: #FFFFFF;
+}
+.footer__link--icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: normal;
+  gap: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

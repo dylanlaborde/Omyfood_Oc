@@ -1,11 +1,45 @@
+//variable
+$font-family:roboto;
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$black:#000000;
+$white:#FFFFFF;
+$grey:#353535;
+$light-grey:#EAEAEA;
+$background:#F6F6F6;
+$dark-green:#008766;
+$gradiant:linear-gradient(-158deg, $color-primary 0%, $color-secondary 100%);
+$gradiant-light:linear-gradient(-158deg, lighten($color-primary, 15%) 0%, lighten($color-secondary, 15%) 100%);
+
+//Mixins
+@mixin flex-center($direction: row , $justify: center , $align: center){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin box-shadow($x , $y, $blur, $opacity){
+    box-shadow: #{$x}px #{$y}px #{$blur}px (#{$black} + #{$opacity});
+}
+
+@mixin drop-shadow($x , $y, $blur, $opacity){
+    filter: drop-shadow(#{$x}px #{$y}px #{$blur}px (#{$black} + #{$opacity}));
+}
+
+@mixin text-style($size,$weight){
+    font-size: #{$size}px;
+    font-weight: $weight;
+}
+
 *{
-    font-family:roboto;
+    font-family:$font-family;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    background-color: #F6F6F6;
+    @include flex-center(column,normal,normal);
+    background-color: $background;
     margin: 0;
     padding: 0;
     height:100vh;
@@ -13,109 +47,92 @@ body {
 }
 
 .header__{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #FFFF;
+    @include flex-center(row);
+    background-color: $white;
     height: 63px;
-    filter: drop-shadow(0px 2px 4px #00000015);
-    &logo{
-        display: flex;
-        justify-content: center;
-    }
-    &logo--img{
-        width: 40%;
-    }
-    &backicon{
-        display: none;
-    }
+    @include drop-shadow(0,2,4,25);
+        &logo{
+            @include flex-center();
+        }
+        &logo--img{
+            width: 40%;
+        }
+        &backicon{
+            display: none;
+        }
 }
 
 .location__{
-    box-shadow: 0px 4px 4px #00000025;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
+    @include box-shadow(0,4,4,25);
     gap: 17px;
-    background-color: #EAEAEA;
+    background-color:$light-grey;
     height: 50px;
-    &textfield{
-       font-weight: 500;
-    }
+        &textfield{
+            @include text-style(16,500);
+        }
 }
 //*******Main*********//
 main{
+    @include flex-center(column,normal,normal);
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
     gap: 30px;
 }
 
 //**Hero**//
 .hero{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    div{
-        display: flex;
-        flex-direction: column;
-        width: 85%;
-        gap: 18px;
-        align-items: center;
-        padding: 30px 0px 0px 0px;
-        h1,h2{
-            text-align: center;
-            margin: 0;
-        }
-        .hero__title{
-            font-weight: 700;
-        }
-        .hero__subtitle{
-            font-size: 18px;
-            font-weight: 300;
-        }
-        .hero__button{
-            border-radius: 25px;
-            color: white;
-            background: linear-gradient(-158deg, #9356DC 0%, #FF79DA 100%);
-            border: none;
-            width: 218px;
-            font-weight: 500;
-            font-size: 18px;
-            height: 50px;
-            box-shadow: 0px 4px 10px #00000025;
-            &:hover{
-                background: linear-gradient(-158deg, lighten(#9356DC, 15%) 0%, lighten(#FF79DA, 15%) 100%);
-                box-shadow: 0px 4px 15px #00000035;
+    @include flex-center(column);
+        &__container{
+            @include flex-center(column);
+            gap: 18px;
+            padding: 30px 0px 0px 0px;
+            width: 85%;
+            h1,h2{
+                text-align: center;
+                margin: 0;
             }
         }
-    }
-       
+        &__title{
+            @include text-style(24,700);
+        }
+        &__subtitle{
+            @include text-style(18,300);
+        }
+        &__button{
+            background: $gradiant;
+            border: none;
+            border-radius: 25px;
+            @include box-shadow(0, 4, 10, 25);
+            color: $background;
+            @include text-style(18, 500);
+            height: 50px;
+            width: 218px;
+            &:hover{
+                background: $gradiant-light;
+                @include box-shadow(0,4,15,35);
+            }
+        }
 }
 //*Fonctionement*//
 
 .fonctionement{
-    background-color: #FFFFFF;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
+    background-color: $white;
+    @include flex-center(column);
     gap: 25px;
     padding-bottom: 30px;
     &__btn{
-        display: flex;
-        align-items: center;
-        width: 85%;
+        background-color: $background;
         border-radius: 20px;
-        background-color: #F6F6F6;
+        @include flex-center(row,normal);
+        @include drop-shadow(0,4,15,25);
         height: 70px;
-        filter: drop-shadow(0px 4px 15px #00000025);
+        width: 85%;
         h2{
-            font-size: 16px;
-            font-weight: 500;
+            @include text-style(16, 500);
         }
         &:hover{
-            background: lighten(#F6F6F6,15%);
-            box-shadow: 0px 4px 15px #00000035;
+            background: lighten($background,15%);
+            @include box-shadow(0, 4, 15, 35);
         }
     }
     &__title{
@@ -124,16 +141,15 @@ main{
         padding: 25px 0px 0px 20px;
     }
     &__number{
-        position: relative;
-        left: -15px;
-        text-align: center;
-        border-radius: 50%;
         background: rgba(147, 86, 220, 1);
-        height: 24px;
-        width: 24px;
+        border-radius: 50%;
         color: white;
-        font-size: 14px;
-        font-weight: 500;
+        @include text-style(14, 500);
+        height: 24px;
+        left: -15px;
+        position: relative;
+        text-align: center;
+        width: 24px;
         span{
             left: 8px;
             top: 3px;
@@ -141,13 +157,11 @@ main{
         }
     }
     &__content{
+        @include flex-center(row,normal);
         gap: 27px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
     }
     &__icon--purple{
-        color: #9356DC;
+        color: $color-primary;
     }
 }
 
@@ -157,16 +171,14 @@ main{
     margin-bottom: 60px;
     &__title{
         margin: 0;
-        font-size: 24px;
-        font-weight: 700;
+        @include text-style(24, 700);
     }
     &__card{
-        display: flex;
-        flex-direction: column;
-        height: 251px;
-        filter: drop-shadow(0px 4px 15px #00000010);
-        background: #FFFFFF;
+        background: $white;
         border-radius: 15px;
+        @include flex-center(column,normal,normal);
+        height: 251px;
+        @include drop-shadow(0,4,15,10);
         img{
             border-radius: 15px 15px 0px 0px;
             object-fit: cover;
@@ -175,71 +187,66 @@ main{
         }
     }
     &__badge{
-        background-color: #99E2D0;
+        background-color: $color-tertiary;
         border-radius: 2px;
         width: 80px;
         height: 29px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center();
         position: absolute;
         top: 13px;
         right: 15px;
         span{
-            font-size: 14px;
-            font-weight: 500px;
-            color: #008766;
+            @include text-style(14, 500);
+            color:$dark-green;
         }
     }
     &__content{
-        display: flex;
-        justify-content: space-between;
+        @include flex-center(row,space-between);
         padding: 12px;
     }
     &__subtitle{
         margin: 0;
-        font-size: 18px;
-        font-weight: 700;
+        @include text-style(18, 700);
     }
     &__text{
         margin: 0;
-        font-size: 17px;
-        font-weight: 300;
+        @include text-style(17, 300);
     }
     &__like{
         font-size: 24px;
     }
     &__menu{
         gap: 18px;
-        display: flex;
-        flex-direction: column;
+        @include flex-center(column,normal,normal);
         padding: 0px 17px 17px 17px;
         a{
             text-decoration: none;
-            color: #000000;
+            color: $black;
         }
     }
 
 }
 //*Footer*//
 .footer{
-    background-color: #353535;
+    background-color:$grey;
     padding: 22px 25px 22px 25px;
-    display: flex;
-    flex-direction: column;
+    @include flex-center(column,normal,normal);
     gap: 16px;
-    .footer__logo > img{
+    &__logo > img{
         filter: invert(100%);
         width: 35%;
     }
-    .footer__link{
-        display: flex;
-        flex-direction: column;
+    &__link-container{
+        @include flex-center(column, normal, normal);
         gap:7px;
-        a{  
-            text-decoration: none;
-            color: white;
-        }
+    }
+    &__link{
+        text-decoration: none;
+        color: $white;
+    }
+    &__link--icon{
+        @include flex-center(row,normal,normal);
+        gap: 10px;
     }
 }
 
