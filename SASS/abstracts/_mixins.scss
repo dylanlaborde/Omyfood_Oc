@@ -17,3 +17,27 @@
     font-size: #{$size}px;
     font-weight: $weight;
 }
+
+@mixin button(
+    $background,
+    $backgound-hover,
+    $text-color,
+    $width,
+    $height,
+    $radius,
+    $box-shadow,
+    $box-shadow-hover
+    ) 
+    {
+        background: $background;
+        border-radius: $radius;
+        color: $text-color;
+        height: $height;
+        width: $width;
+        border-radius: $radius;
+        @include box-shadow($box-shadow...);
+        &:hover{
+            background: $backgound-hover;
+            @include box-shadow($box-shadow-hover...);
+        }
+    }

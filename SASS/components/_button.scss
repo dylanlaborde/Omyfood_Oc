@@ -1,0 +1,28 @@
+.buttons{
+    border: none;
+    &--primary{
+        @include button(
+            $gradiant,
+            $gradiant-light,
+            $background,
+            218px,
+            50px,
+            25px,
+            (0, 4, 10, 25),
+            (0,4,15,35)
+        );
+    }
+    &--secondary{
+        @include button(
+            $background,
+            lighten($background,15%),
+            $black,
+            85%,
+            70px,
+            20px,
+            (0,4,15,25),
+            (0, 4, 15, 35)
+        )
+    }
+
+}
