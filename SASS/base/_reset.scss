@@ -1,0 +1,7 @@
+body {
+    @include flex-center(column,normal,normal);
+    background-color: $background;
+    margin: 0;
+    padding: 0;
+    height:100vh;
+}

@@ -1,0 +1,10 @@
+.location{
+    @include flex-center();
+    @include box-shadow(0,4,4,25);
+    gap: 17px;
+    background-color:$light-grey;
+    height: 50px;
+        &__textfield{
+            @include text-style(16,500);
+        }
+}

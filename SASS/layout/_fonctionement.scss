@@ -1,0 +1,49 @@
+.fonctionement{
+    background-color: $white;
+    @include flex-center(column);
+    gap: 25px;
+    padding-bottom: 30px;
+    &__btn{
+        background-color: $background;
+        border-radius: 20px;
+        @include flex-center(row,normal);
+        @include drop-shadow(0,4,15,25);
+        height: 70px;
+        width: 85%;
+        h2{
+            @include text-style(16, 500);
+        }
+        &:hover{
+            background: lighten($background,15%);
+            @include box-shadow(0, 4, 15, 35);
+        }
+    }
+    &__title{
+        align-self: flex-start;
+        margin: 0;
+        padding: 25px 0px 0px 20px;
+    }
+    &__number{
+        background: rgba(147, 86, 220, 1);
+        border-radius: 50%;
+        color: white;
+        @include text-style(14, 500);
+        height: 24px;
+        left: -15px;
+        position: relative;
+        text-align: center;
+        width: 24px;
+        span{
+            left: 8px;
+            top: 3px;
+            position: absolute;
+        }
+    }
+    &__content{
+        @include flex-center(row,normal);
+        gap: 27px;
+    }
+    &__icon--purple{
+        color: $color-primary;
+    }
+}

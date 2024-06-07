@@ -1,0 +1,22 @@
+.footer{
+    background-color:$grey;
+    padding: 22px 25px 22px 25px;
+    @include flex-center(column,normal,normal);
+    gap: 16px;
+    &__logo > img{
+        filter: invert(100%);
+        width: 35%;
+    }
+    &__link-container{
+        @include flex-center(column, normal, normal);
+        gap:7px;
+    }
+    &__link{
+        text-decoration: none;
+        color: $white;
+    }
+    &__link--icon{
+        @include flex-center(row,normal,normal);
+        gap: 10px;
+    }
+}

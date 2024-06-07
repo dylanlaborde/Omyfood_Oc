@@ -1,0 +1,15 @@
+.header{
+    @include flex-center(row);
+    background-color: $white;
+    height: 63px;
+    @include drop-shadow(0,2,4,25);
+        &__logo{
+            @include flex-center();
+        }
+        &__logo--img{
+            width: 40%;
+        }
+        &__backicon{
+            display: none;
+        }
+}
