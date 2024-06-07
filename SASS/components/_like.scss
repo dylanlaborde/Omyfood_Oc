@@ -6,11 +6,16 @@
     }
     &__toggle:checked + &__label .like--empty {
         display: none;
+        
     }
     &__toggle:checked + &__label .like--full {
         opacity: 1;
+        animation: rotate-scale-up 0.5s linear ;
     }
     &--full{
         opacity:0;
+    }
+    &:hover{
+       scale: 1.25;
     }
 }

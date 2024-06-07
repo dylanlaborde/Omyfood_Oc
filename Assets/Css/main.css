@@ -1,3 +1,14 @@
+@keyframes rotate-scale-up {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -162,9 +173,13 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 .like__toggle:checked + .like__label .like--full {
   opacity: 1;
+  animation: rotate-scale-up 0.5s linear;
 }
 .like--full {
   opacity: 0;
+}
+.like:hover {
+  scale: 1.25;
 }
 
 .header {
