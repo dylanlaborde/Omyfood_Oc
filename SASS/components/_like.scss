@@ -1,0 +1,16 @@
+.like{
+    height: 16px;
+    cursor: pointer;
+    &__toggle{
+        display: none;
+    }
+    &__toggle:checked + &__label .like--empty {
+        display: none;
+    }
+    &__toggle:checked + &__label .like--full {
+        opacity: 1;
+    }
+    &--full{
+        opacity:0;
+    }
+}

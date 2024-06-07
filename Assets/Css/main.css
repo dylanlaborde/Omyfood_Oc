@@ -149,8 +149,22 @@ h1, h2, h3, h4, h5, h6, p, span {
   font-size: 17px;
   font-weight: 300;
 }
-.card__like {
-  font-size: 24px;
+
+.like {
+  height: 16px;
+  cursor: pointer;
+}
+.like__toggle {
+  display: none;
+}
+.like__toggle:checked + .like__label .like--empty {
+  display: none;
+}
+.like__toggle:checked + .like__label .like--full {
+  opacity: 1;
+}
+.like--full {
+  opacity: 0;
 }
 
 .header {
