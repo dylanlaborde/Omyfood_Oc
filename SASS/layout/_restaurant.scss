@@ -4,35 +4,6 @@
         margin: 0;
         @include text-style(24, 700);
     }
-    &__badge{
-        background-color: $color-tertiary;
-        border-radius: 2px;
-        width: 80px;
-        height: 29px;
-        @include flex-center();
-        position: absolute;
-        top: 13px;
-        right: 15px;
-        span{
-            @include text-style(14, 500);
-            color:$dark-green;
-        }
-    }
-    &__content{
-        @include flex-center(row,space-between);
-        padding: 12px;
-    }
-    &__subtitle{
-        margin: 0;
-        @include text-style(18, 700);
-    }
-    &__text{
-        margin: 0;
-        @include text-style(17, 300);
-    }
-    &__like{
-        font-size: 24px;
-    }
     &__menu{
         gap: 18px;
         @include flex-center(column,normal,normal);
@@ -42,5 +13,4 @@
             color: $black;
         }
     }
-
 }
