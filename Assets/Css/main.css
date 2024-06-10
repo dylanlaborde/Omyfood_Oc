@@ -219,21 +219,6 @@ h1, h2, h3, h4, h5, h6, p, span {
   font-size: 18px;
   font-weight: 300;
 }
-.hero__button {
-  background: linear-gradient(-158deg, #9356DC 0%, #FF79DA 100%);
-  border: none;
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px #00000025;
-  color: #F6F6F6;
-  font-size: 18px;
-  font-weight: 500;
-  height: 50px;
-  width: 218px;
-}
-.hero__button:hover {
-  background: linear-gradient(-158deg, #bc95e9 0%, #ffc6ef 100%);
-  box-shadow: 0px 4px 15px #00000035;
-}
 
 main {
   display: flex;
@@ -314,6 +299,35 @@ main {
 .restaurant__menu a {
   text-decoration: none;
   color: #000000;
+}
+
+.menuImg {
+  height: 33%;
+}
+.menuImg__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  background: white;
+}
+.menu__container {
+  background: #F6F6F6;
+  border-radius: 40px 40px 0px 0px;
+}
+.menu__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 186px;
+}
+.menu__check {
+  height: 20px;
+  width: 20px;
+  filter: invert(1);
 }
 
 /*# sourceMappingURL=main.css.map */
