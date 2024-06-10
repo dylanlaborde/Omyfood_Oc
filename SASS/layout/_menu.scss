@@ -1,5 +1,18 @@
 .menu{
     background: white;
+    &__title{
+        font-family: $font-title;
+        font-size: 28px;
+        font-weight: 400;
+    }
+    &__headline{
+        @include flex-center(row,normal,center);
+        gap: 24px;
+        padding-top: 32px;
+        svg{
+            height: 21px;
+        }
+    }
     &__container{
         background: $background;
         border-radius: 40px 40px 0px 0px;
@@ -19,9 +32,5 @@
     &__section > &__row{
         @include flex-center(column,normal,normal);
         gap: 12px;
-    }
-    &__headline{
-        padding-top: 32px;
-    }
-    
+    }    
 }

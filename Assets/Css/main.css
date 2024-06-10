@@ -313,6 +313,22 @@ main {
 .menu {
   background: white;
 }
+.menu__title {
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-weight: 400;
+}
+.menu__headline {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: center;
+  gap: 24px;
+  padding-top: 32px;
+}
+.menu__headline svg {
+  height: 21px;
+}
 .menu__container {
   background: #F6F6F6;
   border-radius: 40px 40px 0px 0px;
@@ -338,9 +354,6 @@ main {
   justify-content: normal;
   align-items: normal;
   gap: 12px;
-}
-.menu__headline {
-  padding-top: 32px;
 }
 
 .cardMenu {
