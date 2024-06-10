@@ -1,15 +1,10 @@
 .header{
-    @include flex-center(row);
+    @include flex-center(row , normal , center);
     background-color: $white;
-    height: 63px;
+    padding: 14px 0px 13px 17px;
     @include drop-shadow(0,2,4,25);
-        &__logo{
-            @include flex-center();
-        }
-        &__logo--img{
-            width: 40%;
-        }
-        &__backicon{
-            display: none;
-        }
+    &__logo{
+        @include flex-center();
+        flex: 1;
+    }    
 }
