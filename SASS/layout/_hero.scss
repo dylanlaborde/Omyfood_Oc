@@ -16,18 +16,4 @@
         &__subtitle{
             @include text-style(18,300);
         }
-        &__button{
-            background: $gradiant;
-            border: none;
-            border-radius: 25px;
-            @include box-shadow(0, 4, 10, 25);
-            color: $background;
-            @include text-style(18, 500);
-            height: 50px;
-            width: 218px;
-            &:hover{
-                background: $gradiant-light;
-                @include box-shadow(0,4,15,35);
-            }
-        }
 }
