@@ -361,6 +361,14 @@ main {
   align-items: normal;
   gap: 12px;
 }
+.menu__section__title {
+  font-size: 16px;
+  font-weight: 300;
+  border-bottom: 3px solid #99E2D0;
+  height: 27px;
+  text-transform: uppercase;
+  width: 40px;
+}
 
 .cardMenu {
   border-radius: 15px;
