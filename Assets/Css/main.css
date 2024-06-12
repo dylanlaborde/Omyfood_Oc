@@ -369,11 +369,69 @@ main {
   text-transform: uppercase;
   width: 40px;
 }
+.menu__PlateAndPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  flex: 1;
+  overflow: hidden;
+  gap: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__namePlate {
+  font-size: 18px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__description {
+  font-size: 15px;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__price {
+  font-size: 15px;
+  font-weight: 700;
+}
+.menu__plate {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__price {
+  align-self: flex-end;
+}
+.menu__select {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  width: 59px;
+  overflow: hidden;
+  margin-right: -4rem;
+}
 
 .cardMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: normal;
+  overflow: hidden;
   border-radius: 15px;
   background: #FFFFFF;
-  padding: 15px;
+  cursor: pointer;
+}
+.cardMenu:hover .menu__select {
+  margin: 0;
+}
+.cardMenu:active .menu__select {
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

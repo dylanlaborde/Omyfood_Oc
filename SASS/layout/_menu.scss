@@ -42,5 +42,43 @@
         height: 27px;
         text-transform: uppercase;
         width: 40px;
+    }
+    &__PlateAndPrice{
+        @include flex-center();
+        padding: 15px;
+        flex: 1;
+        overflow: hidden;
+        gap: 5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &__namePlate{
+        @include text-style(18,700);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &__description{
+        @include text-style(15,300);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &__price{
+        @include text-style(15,700);
+    }
+    &__plate{
+        flex: 1;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    &__price{
+        align-self: flex-end;
+    }
+    &__select{
+        @include flex-center();
+        background: $color-tertiary;
+        width: 59px;
+        overflow: hidden;
+        margin-right: -4rem;
     }    
 }

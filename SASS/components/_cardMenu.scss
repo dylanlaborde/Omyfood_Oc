@@ -1,5 +1,17 @@
 .cardMenu{
+    @include flex-center(row,normal,normal);
+    overflow: hidden;
     border-radius: 15px;
     background: $white;
-    padding: 15px;
+    cursor: pointer;
+    &:hover {
+        .menu__select{
+            margin: 0;
+        }
+    }
+    &:active {
+        .menu__select{
+            margin: 0;
+        }
+    }
 }
