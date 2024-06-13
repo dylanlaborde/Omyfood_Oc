@@ -4,12 +4,17 @@
     overflow: hidden;
     border-radius: 15px;
     background: $white;
+    max-width: 634px;
     cursor: pointer;
-
-    &:active {
+    &__check{
+        display: none;
+    }
+    &__check:checked + .menu__card{
         .menu__select{
-            transition-delay: 0.2s;
-            animation: card-slide 0.5s forwards;
+            margin: 0;
+            svg{
+                animation: jello-horizontal 1s backwards;
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 .menu{
     background: white;
+    margin-bottom: 40px;
     &__title{
         font-family: $font-title;
         font-size: 28px;
@@ -19,7 +20,7 @@
         border-radius: 40px 40px 0px 0px;
         padding: 0px 17px;
         position: relative;
-        top: -55px;  
+        margin-top: -55px;
         gap: 40px;
     }
     &__button{
@@ -79,6 +80,7 @@
         background: $color-tertiary;
         width: 59px;
         overflow: hidden;
-        margin-right: -4rem;
+        margin-right: -60px;
+        transition: all 0.4s;
     }    
 }
