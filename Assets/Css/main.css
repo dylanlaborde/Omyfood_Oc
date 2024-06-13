@@ -9,6 +9,17 @@
     opacity: 0;
   }
 }
+@keyframes card-slide {
+  0% {
+    transition: translateX(4rem);
+    opacity: 0;
+  }
+  100% {
+    margin: 0;
+    transition: translateX(0);
+    opacity: 1;
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -427,11 +438,9 @@ main {
   background: #FFFFFF;
   cursor: pointer;
 }
-.cardMenu:hover .menu__select {
-  margin: 0;
-}
 .cardMenu:active .menu__select {
-  margin: 0;
+  transition-delay: 0.2s;
+  animation: card-slide 0.5s forwards;
 }
 
 /*# sourceMappingURL=main.css.map */

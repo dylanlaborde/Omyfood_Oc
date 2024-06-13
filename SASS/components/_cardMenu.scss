@@ -5,14 +5,11 @@
     border-radius: 15px;
     background: $white;
     cursor: pointer;
-    &:hover {
-        .menu__select{
-            margin: 0;
-        }
-    }
+
     &:active {
         .menu__select{
-            margin: 0;
+            transition-delay: 0.2s;
+            animation: card-slide 0.5s forwards;
         }
     }
 }

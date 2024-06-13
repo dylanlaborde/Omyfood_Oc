@@ -10,3 +10,14 @@
     }
   }
   
+  @keyframes card-slide {
+    0% {
+      transition: translateX(4rem);
+      opacity: 0;
+    }
+    100% {
+      margin: 0;
+      transition: translateX(0);
+      opacity: 1;
+    }
+  }
