@@ -1,5 +1,6 @@
 .cardMenu{
     @include flex-center(row,normal,normal);
+    @include drop-shadow(0,4.1,15.04,10);
     overflow: hidden;
     border-radius: 15px;
     background: $white;
