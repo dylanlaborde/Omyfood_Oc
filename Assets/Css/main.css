@@ -1,12 +1,12 @@
-@keyframes rotate-scale-up {
+@keyframes fade-in {
   0% {
-    transform: scale(1) rotateZ(0);
+    opacity: 1;
   }
   50% {
-    transform: scale(2) rotateZ(180deg);
+    opacity: 0.5;
   }
   100% {
-    transform: scale(1) rotateZ(360deg);
+    opacity: 0;
   }
 }
 body {
@@ -158,23 +158,22 @@ h1, h2, h3, h4, h5, h6, p, span {
 
 .like {
   height: 16px;
+  position: relative;
   cursor: pointer;
 }
 .like__toggle {
   display: none;
 }
 .like__toggle:checked + .like__label .like--empty {
-  display: none;
+  opacity: 0;
 }
 .like__toggle:checked + .like__label .like--full {
   opacity: 1;
-  animation: rotate-scale-up 0.5s linear;
+  animation: fade-in 0.4s ease-in-out reverse;
 }
 .like--full {
+  position: absolute;
   opacity: 0;
-}
-.like:hover {
-  scale: 1.25;
 }
 
 .location {
