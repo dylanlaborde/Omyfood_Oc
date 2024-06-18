@@ -1,0 +1,47 @@
+.loader{
+    @include flex-center();
+    background: $background;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    opacity: 0.9;
+    animation: fadeOut 1s forwards 1.5s;
+    overflow: hidden;
+    &__spinner {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        border: 3px solid;
+        border-color: $color-primary $color-secondary transparent $color-tertiary;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+      &__spinner::after,
+      &__spinner::before {
+        content: '';  
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border: 3px solid;
+        border-color: transparent $color-tertiary $color-primary $color-secondary;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        animation: rotationBack 0.5s linear infinite;
+        transform-origin: center center;
+      }
+      &__spinner::before {
+        width: 32px;
+        height: 32px;
+        border-color: #FFF #FFF transparent transparent;
+        animation: rotation 1.5s linear infinite;
+      }
+}
