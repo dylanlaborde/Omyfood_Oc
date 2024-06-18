@@ -41,3 +41,9 @@
             @include box-shadow($box-shadow-hover...);
         }
     }
+
+@mixin desktop-screen {
+    @media screen and (min-width:$layout-breakpoint-desktop) {
+          @content;
+    }
+}

@@ -3,8 +3,7 @@
         &__container{
             @include flex-center(column);
             gap: 18px;
-            padding: 30px 0px 0px 0px;
-            width: 85%;
+            padding: 1.875rem 1.875rem;
             h1,h2{
                 text-align: center;
                 margin: 0;
@@ -12,8 +11,15 @@
         }
         &__title{
             @include text-style(24,700);
+
+            @include desktop-screen{
+                @include text-style(40,700)
+            }
         }
         &__subtitle{
             @include text-style(18,300);
+        }
+        .buttons{
+            font-size: 16px;
         }
 }

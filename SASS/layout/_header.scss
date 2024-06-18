@@ -6,5 +6,9 @@
     &__logo{
         @include flex-center();
         flex: 1;
-    }    
+    }
+    
+    @include desktop-screen{
+        padding: 1.875rem 0rem;
+    }
 }
