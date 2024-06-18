@@ -372,11 +372,10 @@ main {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  padding-bottom: 30px;
+  padding: 3rem 1.25rem 4.25rem 2rem;
 }
 .fonctionement__title {
   align-self: flex-start;
-  padding: 25px 0px 0px 20px;
 }
 @media screen and (min-width: 1024px) {
   .fonctionement__title {
@@ -419,6 +418,9 @@ main {
 }
 .fonctionement__icon--purple {
   color: #9356DC;
+}
+.fonctionement__btn {
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .fonctionement__btn {
