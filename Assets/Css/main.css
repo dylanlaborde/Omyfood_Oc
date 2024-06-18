@@ -10,15 +10,6 @@
     opacity: 0;
   }
 }
-@keyframes card-slide {
-  0% {
-    transform: translateX(50px);
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 @keyframes jello-horizontal {
   0% {
     transform: scale3d(1, 1, 1);
@@ -74,6 +65,15 @@
   to {
     opacity: 0;
     visibility: hidden;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(50%);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 body {
@@ -542,32 +542,32 @@ main {
   margin-right: -60px;
   transition: all 0.4s;
 }
-.menu__row--entrée label:nth-child(1) {
-  animation: fade-in-bottom 0.8s normal both 0.3s;
+.menu__row--entrée article:nth-child(1) {
+  animation: fadeInUp 0.8s normal both 0.3s;
 }
-.menu__row--plats label:nth-child(1) {
-  animation: fade-in-bottom 0.8s normal both 0.5s;
+.menu__row--plats article:nth-child(1) {
+  animation: fadeInUp 0.8s normal both 0.5s;
 }
-.menu__row--desserts label:nth-child(1) {
-  animation: fade-in-bottom 0.8s normal both 0.7s;
+.menu__row--desserts article:nth-child(1) {
+  animation: fadeInUp 0.8s normal both 0.7s;
 }
-.menu__row--entrée label:nth-child(2) {
-  animation: fade-in-bottom 0.8s normal both 0.4s;
+.menu__row--entrée article:nth-child(2) {
+  animation: fadeInUp 0.8s normal both 0.4s;
 }
-.menu__row--plats label:nth-child(2) {
-  animation: fade-in-bottom 0.8s normal both 0.6s;
+.menu__row--plats article:nth-child(2) {
+  animation: fadeInUp 0.8s normal both 0.6s;
 }
-.menu__row--desserts label:nth-child(2) {
-  animation: fade-in-bottom 0.8s normal both 0.8s;
+.menu__row--desserts article:nth-child(2) {
+  animation: fadeInUp 0.8s normal both 0.8s;
 }
-.menu__row--entrée label:nth-child(3) {
-  animation: fade-in-bottom 0.8s normal both 0.5s;
+.menu__row--entrée article:nth-child(3) {
+  animation: fadeInUp 0.8s normal both 0.5s;
 }
-.menu__row--plats label:nth-child(3) {
-  animation: fade-in-bottom 0.8s normal both 0.7s;
+.menu__row--plats article:nth-child(3) {
+  animation: fadeInUp 0.8s normal both 0.7s;
 }
-.menu__row--desserts label:nth-child(3) {
-  animation: fade-in-bottom 0.8s normal both 0.9s;
+.menu__row--desserts article:nth-child(3) {
+  animation: fadeInUp 0.8s normal both 0.9s;
 }
 
 .cardMenu {
@@ -582,13 +582,11 @@ main {
   max-width: 634px;
   cursor: pointer;
 }
-.cardMenu__check {
-  display: none;
-}
-.cardMenu__check:checked + .menu__card .menu__select {
+.cardMenu:hover .menu__select {
   margin: 0;
+  animation: slideInRight 0.5s forwards;
 }
-.cardMenu__check:checked + .menu__card .menu__select svg {
+.cardMenu:hover .menu__select svg {
   animation: jello-horizontal 1s backwards;
 }
 

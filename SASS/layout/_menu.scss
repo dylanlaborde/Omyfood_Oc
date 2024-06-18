@@ -84,15 +84,16 @@
         transition: all 0.4s;
     }
     &__row{
+
         @for $i from 1 through 3 {
-            &--entrée label:nth-child(#{$i}){
-                animation: fade-in-bottom 0.8s normal both calc(0.2s + ($i * 100ms));
+            &--entrée article:nth-child(#{$i}){
+                animation: fadeInUp 0.8s normal both calc(0.2s + ($i * 100ms));
             }
-            &--plats label:nth-child(#{$i}){
-                animation: fade-in-bottom 0.8s normal both calc(0.4s + ($i * 100ms));
+            &--plats article:nth-child(#{$i}){
+                animation: fadeInUp 0.8s normal both calc(0.4s + ($i * 100ms));
             }
-            &--desserts label:nth-child(#{$i}){
-                animation: fade-in-bottom 0.8s normal both calc(0.6s + ($i * 100ms));
+            &--desserts article:nth-child(#{$i}){
+                animation: fadeInUp 0.8s normal both calc(0.6s + ($i * 100ms));
             }
         }
     }    

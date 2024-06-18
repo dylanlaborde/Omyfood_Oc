@@ -6,12 +6,10 @@
     background: $white;
     max-width: 634px;
     cursor: pointer;
-    &__check{
-        display: none;
-    }
-    &__check:checked + .menu__card{
+    &:hover{
         .menu__select{
             margin: 0;
+            animation: slideInRight 0.5s forwards;
             svg{
                 animation: jello-horizontal 1s backwards;
             }

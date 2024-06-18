@@ -11,19 +11,7 @@
       opacity: 0;
     }
   }
-
-  @keyframes card-slide {
-    0% {
-      transform: translateX(50px);
-
-    }
-
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
+  
   @keyframes jello-horizontal {
     0% {
       transform: scale3d(1, 1, 1);
@@ -91,3 +79,13 @@
         visibility: hidden;
     }
 }
+
+@keyframes slideInRight {
+  0% {
+  transform: translateX(50%);
+  visibility: visible;
+  }
+  100% {
+  transform: translateX(0);
+  }
+} 
