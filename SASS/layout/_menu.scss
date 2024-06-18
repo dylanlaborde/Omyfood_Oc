@@ -82,5 +82,18 @@
         overflow: hidden;
         margin-right: -60px;
         transition: all 0.4s;
+    }
+    &__row{
+        @for $i from 1 through 3 {
+            &--entrée label:nth-child(#{$i}){
+                animation: fade-in-bottom 0.8s normal both calc(0.2s + ($i * 100ms));
+            }
+            &--plats label:nth-child(#{$i}){
+                animation: fade-in-bottom 0.8s normal both calc(0.4s + ($i * 100ms));
+            }
+            &--desserts label:nth-child(#{$i}){
+                animation: fade-in-bottom 0.8s normal both calc(0.6s + ($i * 100ms));
+            }
+        }
     }    
 }
