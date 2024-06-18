@@ -122,11 +122,21 @@ h1, h2, h3, h4, h5, h6, p, span {
   flex-direction: column;
   justify-content: normal;
   align-items: normal;
-  gap: 16px;
+  gap: 7px;
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    flex-direction: row-reverse;
+    height: 7.125rem;
+  }
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
 }
 .footer__logo > img {
   filter: invert(100%);
-  width: 35%;
+  height: 1rem;
 }
 .footer__link-container {
   display: flex;
@@ -135,15 +145,31 @@ h1, h2, h3, h4, h5, h6, p, span {
   align-items: normal;
   gap: 7px;
 }
+@media screen and (min-width: 1024px) {
+  .footer__link-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+}
 .footer__link {
   text-decoration: none;
   color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  text-wrap: nowrap;
+}
+@media screen and (min-width: 1024px) {
+  .footer__link {
+    flex: 1 1;
+  }
 }
 .footer__link--icon {
   display: flex;
   flex-direction: row;
   justify-content: normal;
   align-items: normal;
+  font-size: 14px;
   gap: 10px;
 }
 
