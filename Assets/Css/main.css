@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 @media screen and (min-width: 1024px) {
   .header {
-    padding: 1.875rem 0rem;
+    padding: 1.875rem 1.875rem;
   }
 }
 
@@ -128,6 +128,7 @@ h1, h2, h3, h4, h5, h6, p, span {
   .footer {
     flex-direction: row-reverse;
     height: 7.125rem;
+    box-sizing: border-box;
   }
 }
 .footer__logo {
@@ -518,10 +519,24 @@ main {
   width: 100%;
   height: 100%;
 }
+@media screen and (min-width: 1024px) {
+  .menuImg__image {
+    max-height: 22.68rem;
+  }
+}
 
 .menu {
   background: white;
   margin-bottom: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
 }
 .menu__title {
   font-family: Shrikhand;
@@ -539,6 +554,11 @@ main {
 .menu__headline svg {
   height: 21px;
 }
+@media screen and (min-width: 1024px) {
+  .menu__headline {
+    justify-content: center;
+  }
+}
 .menu__container {
   display: flex;
   flex-direction: column;
@@ -551,6 +571,12 @@ main {
   margin-top: -55px;
   gap: 40px;
 }
+@media screen and (min-width: 1024px) {
+  .menu__container {
+    max-width: 65.9rem;
+    width: 100%;
+  }
+}
 .menu__button {
   display: flex;
   flex-direction: row;
@@ -558,6 +584,11 @@ main {
   align-items: center;
   width: 186px;
   align-self: center;
+}
+@media screen and (min-width: 1024px) {
+  .menu__button {
+    margin-bottom: 40px;
+  }
 }
 .menu__check {
   height: 20px;
@@ -570,6 +601,13 @@ main {
   justify-content: normal;
   align-items: normal;
   gap: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .menu__section, .menu__row {
+    align-self: center;
+    max-width: 39.6rem;
+    width: 100%;
+  }
 }
 .menu__section__title {
   font-size: 16px;

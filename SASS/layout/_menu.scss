@@ -1,6 +1,10 @@
 .menu{
     background: white;
     margin-bottom: 40px;
+    @include desktop-screen{
+        @include flex-center();
+        margin: 0;
+    }
     &__title{
         font-family: $font-title;
         font-size: 28px;
@@ -13,6 +17,9 @@
         svg{
             height: 21px;
         }
+        @include desktop-screen{
+            justify-content: center;
+        }
     }
     &__container{
         @include flex-center(column,normal,normal);
@@ -22,11 +29,18 @@
         position: relative;
         margin-top: -55px;
         gap: 40px;
+        @include desktop-screen{
+            max-width: 65.9rem;
+            width: 100%;
+        }
     }
     &__button{
         @include flex-center(row,center,center);
         width: 186px;
         align-self: center;
+        @include desktop-screen{
+            margin-bottom: 40px;
+        }
     }
     &__check{
         height: 20px;
@@ -36,6 +50,11 @@
     &__section ,&__row{
         @include flex-center(column,normal,normal);
         gap: 12px;
+        @include desktop-screen{
+            align-self: center;
+            max-width: 39.6rem;
+            width: 100%;
+        }
     }
     &__section__title{
         @include text-style(16,300);

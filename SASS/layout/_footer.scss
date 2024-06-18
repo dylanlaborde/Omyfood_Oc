@@ -6,6 +6,7 @@
     @include desktop-screen{
         flex-direction: row-reverse;
         height: 7.125rem;
+        box-sizing: border-box;
     }
     &__logo{
         display: flex;
