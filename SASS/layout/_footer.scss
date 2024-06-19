@@ -28,6 +28,7 @@
     &__link{
         text-decoration: none;
         color: $white;
+        font-family: $font-family;
         @include text-style(16,400);
         text-wrap: nowrap;
         @include desktop-screen{
@@ -36,7 +37,7 @@
     }
     &__link--icon{
         @include flex-center(row,normal,normal);
-        font-size: 14px;
+        @include text-style(16,500);
         gap: 10px;
     }
 }

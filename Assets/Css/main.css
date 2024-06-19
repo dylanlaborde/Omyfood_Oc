@@ -157,6 +157,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 .footer__link {
   text-decoration: none;
   color: #FFFFFF;
+  font-family: roboto;
   font-size: 16px;
   font-weight: 400;
   text-wrap: nowrap;
@@ -171,7 +172,8 @@ h1, h2, h3, h4, h5, h6, p, span {
   flex-direction: row;
   justify-content: normal;
   align-items: normal;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
   gap: 10px;
 }
 
