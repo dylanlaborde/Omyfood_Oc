@@ -104,7 +104,7 @@
     }
     &__row{
 
-        @for $i from 1 through 3 {
+        @for $i from 1 through 4 {
             &--entrée article:nth-child(#{$i}){
                 animation: fadeInUp 0.8s normal both calc(0.2s + ($i * 100ms));
             }
