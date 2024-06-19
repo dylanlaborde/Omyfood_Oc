@@ -1,5 +1,6 @@
 .buttons{
     border: none;
+    cursor :pointer;
     &--primary{
         @include button(
             $gradiant,
@@ -13,6 +14,7 @@
         );
     }
     &--secondary{
+        cursor :pointer;
         @include button(
             $background,
             lighten($background,15%),

@@ -176,6 +176,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 
 .buttons {
   border: none;
+  cursor: pointer;
 }
 .buttons--primary {
   background: linear-gradient(-158deg, #9356DC 0%, #FF79DA 100%);
@@ -191,6 +192,7 @@ h1, h2, h3, h4, h5, h6, p, span {
   box-shadow: 0px 4px 15px #00000035;
 }
 .buttons--secondary {
+  cursor: pointer;
   background: #F6F6F6;
   border-radius: 20px;
   color: #000000;
