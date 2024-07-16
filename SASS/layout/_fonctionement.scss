@@ -5,9 +5,8 @@
     padding: 3rem 1.25rem 4.25rem 2rem;
         &__title {
             align-self: flex-start;
-            @include breakpoint('Desktop'){
-                width: 100%;
-            }
+            width: 100%;
+           
         }
 
         &__btn {
@@ -50,13 +49,24 @@
             @include breakpoint('Desktop') {
                 width: 30%;
             }
+            @include breakpoint('Tablet') {
+                width: 30%;
+            }
         }
 
     @include breakpoint('Desktop') {
         @include flex-center();
+        flex-direction: row;
         flex-wrap: wrap;
         padding: 3.125rem 11.25rem 3.125rem 11.25rem;
     }
+    @include breakpoint('Tablet'){
+        padding: 3rem 1.25rem 4.25rem 2rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+  
 
 
 

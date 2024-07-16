@@ -403,11 +403,7 @@ main {
 }
 .fonctionement__title {
   align-self: flex-start;
-}
-@media (min-width: 1024px) {
-  .fonctionement__title {
-    width: 100%;
-  }
+  width: 100%;
 }
 .fonctionement__btn {
   display: flex;
@@ -454,14 +450,27 @@ main {
     width: 30%;
   }
 }
+@media (min-width: 768px) {
+  .fonctionement__btn {
+    width: 30%;
+  }
+}
 @media (min-width: 1024px) {
   .fonctionement {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 3.125rem 11.25rem 3.125rem 11.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .fonctionement {
+    padding: 3rem 1.25rem 4.25rem 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -496,7 +505,7 @@ main {
   align-items: normal;
   gap: 18px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .restaurant__cards-wrapper {
     display: flex;
     flex-direction: row;

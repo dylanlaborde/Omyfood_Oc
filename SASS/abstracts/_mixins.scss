@@ -42,7 +42,12 @@
         }
     }
 
-@mixin breakpoint($size){
-    @if $size == "Desktop"{@media (min-width:$layout-breakpoint-desktop) {@content;}}
-    @if size == "Tablet"{@media (max-width:1024px) {@content;}} 
-}
+
+@mixin breakpoint($size) {
+    @if $size == 'Desktop' {
+      @media (min-width: 1024px) { @content; }
+    }
+    @else if $size == 'Tablet' {
+      @media (min-width: 768px) { @content; }
+    }
+  }

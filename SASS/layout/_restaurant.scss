@@ -23,7 +23,7 @@
     &__cards-wrapper{
         @include flex-center(column,normal,normal);
         gap: 18px;
-        @include breakpoint('Desktop'){
+        @include breakpoint('Tablet'){
             @include flex-center();
             flex-wrap: wrap;
             gap: 2rem 6.25rem;
