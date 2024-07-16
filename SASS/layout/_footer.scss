@@ -3,7 +3,7 @@
     padding: 22px 25px 22px 25px;
     @include flex-center(column,normal,normal);
     gap: 7px;
-    @include desktop-screen{
+    @include breakpoint('Desktop'){
         flex-direction: row-reverse;
         height: 7.125rem;
         box-sizing: border-box;
@@ -19,7 +19,7 @@
     &__link-container{
         @include flex-center(column, normal, normal);
         gap:7px;
-        @include desktop-screen{
+        @include breakpoint('Desktop'){
             flex-direction: row;
             align-items: center;
             gap: 20px;
@@ -31,7 +31,7 @@
         font-family: $font-family;
         @include text-style(16,400);
         text-wrap: nowrap;
-        @include desktop-screen{
+        @include breakpoint('Desktop'){
             flex: 1 1; 
         }
     }

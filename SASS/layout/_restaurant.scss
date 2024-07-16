@@ -10,7 +10,7 @@
         @include flex-center(column,normal,normal);
         padding: 3.375rem 1.125rem 4.125rem 1.125rem;
         
-        @include desktop-screen{
+        @include breakpoint('Desktop'){
             padding: 1.875rem 11.25rem 1.875rem 11.25rem;
 
         }
@@ -23,7 +23,7 @@
     &__cards-wrapper{
         @include flex-center(column,normal,normal);
         gap: 18px;
-        @include desktop-screen{
+        @include breakpoint('Desktop'){
             @include flex-center();
             flex-wrap: wrap;
             gap: 2rem 6.25rem;

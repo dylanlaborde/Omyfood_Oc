@@ -12,7 +12,7 @@
         &__title{
             @include text-style(24,700);
 
-            @include desktop-screen{
+            @include breakpoint('Desktop'){
                 @include text-style(40,700)
             }
         }

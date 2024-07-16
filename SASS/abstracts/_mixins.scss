@@ -42,8 +42,7 @@
         }
     }
 
-@mixin desktop-screen {
-    @media screen and (min-width:$layout-breakpoint-desktop) {
-          @content;
-    }
+@mixin breakpoint($size){
+    @if $size == "Desktop"{@media (min-width:$layout-breakpoint-desktop) {@content;}}
+    @if size == "Tablet"{@media (max-width:1024px) {@content;}} 
 }

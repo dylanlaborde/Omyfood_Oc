@@ -1,7 +1,7 @@
 .menu{
     background: white;
     margin-bottom: 40px;
-    @include desktop-screen{
+    @include breakpoint('Desktop'){
         @include flex-center();
         margin: 0;
     }
@@ -17,7 +17,7 @@
         svg{
             height: 21px;
         }
-        @include desktop-screen{
+        @include breakpoint('Desktop'){
             justify-content: center;
         }
     }
@@ -29,7 +29,7 @@
         position: relative;
         margin-top: -55px;
         gap: 40px;
-        @include desktop-screen{
+        @include breakpoint('Desktop'){
             max-width: 65.9rem;
             width: 100%;
         }
@@ -38,7 +38,7 @@
         @include flex-center(row,center,center);
         width: 186px;
         align-self: center;
-        @include desktop-screen{
+        @include breakpoint('Desktop'){
             margin-bottom: 40px;
         }
     }
@@ -50,7 +50,7 @@
     &__section ,&__row{
         @include flex-center(column,normal,normal);
         gap: 12px;
-        @include desktop-screen{
+        @include breakpoint('Desktop'){
             align-self: center;
             max-width: 39.6rem;
             width: 100%;
